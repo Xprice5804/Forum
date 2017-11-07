@@ -43,12 +43,15 @@ header, footer {
 
 nav {
   display: flex;
+  position: fixed;
+  height: 100%;
+  margin-top: -5px;
 }
 
 nav ul li a{
   display: flex;
   flex-grow: 1 1 1;
-  flex-basis: 600px;
+  flex-basis: 300px;
   flex-direction: column;
   justify-content: center;
   width: 100px
@@ -58,9 +61,8 @@ nav ul li a{
 nav li{
   list-style: none;
   display: flex;
-  padding: 40px;
-  margin: 20px;
   color: rgb(100, 100, 100);
+  font-size: 20px;
 }
 
 /*Start of classes*/
@@ -79,10 +81,53 @@ nav li{
     flex-direction: column;
   }
 
- .continer_main{
+ .sticky-nav {
    display: flex;
-   width: 100%;
+   flex-flow: column;
+   justify-content: space-around;
+   align-items: center;
+   align-content: center;
+   border: 0 solid magenta;
+   background: var(--light-light-gray);
+   list-style-type: none;
+   font-family: var(--main-font-family);
+   font-size: 3rem;
+   letter-spacing: 0.15rem;
+   color: var(--dark-gray);
  }
+
+ .sticky-nav >
+ li:nth-child(3) {
+   flex: 2 1 auto;
+ }
+
+ .sticky-nav >
+ li:nth-child(1),
+ li:nth-child(2),
+ li:nth-child(4),
+ li:nth-child(5) {
+   flex: 1 1 auto;
+ }
+
+ .sticky-nav a {
+   display: block;
+   border: 0 solid cyan;
+   padding: 1rem;
+   text-align: center;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: var(--dark-gray);
+   transition: ease-in-out 0.2s; /* smooth */
+ }
+
+ .sticky-nav a:hover {
+   background: var(--light-gray);
+ }
+
+.content{
+  margin-left: 80px;
+}
+
 
 /*Start of ID's*/
 
@@ -105,9 +150,8 @@ nav li{
 #main > nav {
   margin: 0.4rem;
   padding: 0.5rem;
-  border: 1px solid #8888bb;
-  background: #ccccff;
-  flex: 1 6 20%;
+  background: var(--light-light-gray);
+  flex: 1 6 3%;
   order: 1;
 }
 
