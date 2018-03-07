@@ -1,52 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IT Forum</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/nav_index.css">
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAu3C173O8BKmukTaW9IPytcvOnmWx6kac",
+    authDomain: "home-webpage.firebaseapp.com",
+    databaseURL: "https://home-webpage.firebaseio.com",
+    projectId: "home-webpage",
+    storageBucket: "home-webpage.appspot.com",
+    messagingSenderId: "242307706858"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="./css/master.css">
-  <title>Forum</title>
+  <body>
+    <nav class="nav">
+      <ul>
+        <li>
+          <a class="index" href="index.html">
+            <img id="home" src="./icons/home.svg" alt="home">
+            Home
+          </a>
+        </li>
+        <li></li>
+        <li>
+          <a href="bakgrunn.html">bakgrunn</a>
+        </li>
+        <li>
+          <a href="natid.html">nåtid</a>
+        </li>
+        <li>
+          <a href="fremtid.html">fremtid</a>
+        </li>
+        <li>
+          <a href="kilder.html">referanser</a>
+        </li>
+      </ul>
+    </nav>
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-3754375183342313",
-      enable_page_level_ads: true
-    });
-  </script>
-
-</head>
-
-<body>
-
-  <nav>
-    <ul class="sticky-nav">
-      <li><a href="#"><img src="./icons/meny_burger_1.svg" alt="Menu" width=50px></a></li>
-      <li><a href="#"><img src="./icons/button_pluss.svg" alt="Add" width=50px></a></li>
-      <li><a href="#">Site 1</a></li>
-      <li><a href="#">Site 2</a></li>
+    <div class="group">
+    <h2 class="navheader slide-trigger">Meny</h2>
+    <ul class="navigation group">
+      <li><a href="index.html">Hjem</a></li>
+      <li><a href="bakgrunn.html">Bakgrunn</a></li>
+      <li><a href="natid.html">Nåtid</a></li>
+      <li><a href="fremtid.html">Fremtid</a></li>
+      <li><a href="kilder.html">Referanser</a></li>
     </ul>
-  </nav>
-
-  <div class="content">
-    <div id='main'>
-      <article>
-        article
-      </article>
-
-
-      <aside>
-        aside
-      </aside>
-
-    </div>
-    <div class="footer">
-      <footer>footer</footer>
-    </div>
-
   </div>
 
 
 
-</body>
 
+    <header id="up">
+      <div class="overlay">
+        <h1>digital makt</h1>
+        <p class="intro">Hvem styrer vår digitale hverdag?</p>
+        <a href="#scrollIndex">
+          <img src="./icons/down-arrow.svg" alt="down-arrow">
+        </a>
+      </div>
+    </header>
+      <main id="scrollIndex">
+
+      </main>
+      <footer>
+        <p>
+          <a href="#up"><img src="./icons/up-arrow.svg" alt="up"></a>
+          <br>
+
+        </p>
+      </footer>
+  </body>
+
+  <!-- smooth scroll js module: https://github.com/zengabor/zenscroll -->
+  <script src="./JS/zenscroll-latest/zenscroll-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
